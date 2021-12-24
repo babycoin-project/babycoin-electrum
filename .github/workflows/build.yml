@@ -36,7 +36,7 @@ jobs:
 
             - name: Extract gz binaries
               if: runner.os == 'Linux'
-              run: tar -xf latest.gz
+              run: unzip latest.zip
               shell: bash
               working-directory: ./downloads
 
