@@ -22,6 +22,10 @@ jobs:
               with:
                 node-version: "11.9.0"
 
+            - name: Linux-libzmq
+              if: runner.os == 'Linux'
+              run: sudo apt-get install libzmq*
+
             - name: Install dependencies
               run: npm install -f
 
