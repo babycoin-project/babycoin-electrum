@@ -9,9 +9,9 @@
 
 #### Commands
 ```
-nvm use 13
+nvm use 11.9.0
 npm install -g quasar-cli
-git clone https://github.com/synthaze/babycoin-electrum
+git clone https://github.com/babycoin-project/babycoin-electrum
 cd babycoin-electrum
 cp path_to_babycoin_binaries/babycoind bin/
 cp path_to_babycoin_binaries/babycoin-wallet-rpc bin/
