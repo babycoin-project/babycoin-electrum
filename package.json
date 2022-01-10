@@ -1,6 +1,6 @@
 {
   "name": "babycoin-electrum",
-  "version": "0.6.1.1",
+  "version": "2.0.3",
   "daemonVersion": "0.6.1.1",
   "description": "GUI interface for BabyCoin Wallet BABY Currency",
   "productName": "BabyCoin Electron Wallet",
