@@ -4,7 +4,7 @@
   * Repo to latest version of babycoin-electrum, the BabyCoin electrom wallet.
 
 #### Pre-requisites
-
+ 
 - Download latest daemon [babycoind](https://github.com/babycoin-project/babycoin/releases/latest)
 
 #### Commands
