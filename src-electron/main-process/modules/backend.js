@@ -320,7 +320,7 @@ export class Backend {
                   }
 
                   if (path) {
-                      const baseUrl = net_type === "testnet" ? "https://testnet.babycoin-network.org/" : "https://explorer.babycoin-network.org/"
+                      const baseUrl = net_type === "testnet" ? "https://testnet.babycoin-network.org/" : "https://blockchain.babycoin.dev/"
                       const url = `${baseUrl}/${path}/`
                       require("electron").shell.openExternal(url + params.id)
                   }
