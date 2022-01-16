@@ -1950,7 +1950,7 @@ var evolutionConfig = {
     coinSymbol: 'BABY',
     coinName: 'BabyCoin',
     coinUriPrefix: 'babycoin:',
-    addressPrefix: 0x6362
+    addressPrefix: 0x231e4e
 };
 
 var cnUtilGen = function(initConfig) {

@@ -33,8 +33,7 @@ export class Backend {
 
 
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
-        this.remotes = [{host: "babycoin.dev", port:51022},
-                        {host: "babycoin.multi-pool.net", port:51022}]
+        this.remotes = [{host: "remote.babycoin.dev", port:51022}]
 
 
         if(os.platform() == "win32") {
@@ -73,7 +72,7 @@ export class Backend {
                         const daemons = {
                             mainnet: {
                                 ...daemon,
-                                remote_host: "babycoin.dev",
+                                remote_host: "remote.babycoin.dev",
                                 remote_port: 51022
                             },
                             stagenet: {
@@ -112,11 +111,11 @@ export class Backend {
                 notify_empty_password: true,
                 minimize_to_tray: false,
                 autostart: false,
-                timeout: 600000 // 10 minutes
+                timeout: 3600000 // 60 minutes
                 },
                 daemon: {
                 type: "local_remote",
-                remote_host: "babycoin.dev",
+                remote_host: "remote.babycoin.dev",
                 remote_port: 51022,
                 p2p_bind_ip: "0.0.0.0",
                 p2p_bind_port: 51021,
@@ -139,7 +138,7 @@ export class Backend {
 
             pool: {
                 server: {
-                    enabled: false,
+                    enabled: true,
                     bindIP: "0.0.0.0",
                     bindPort: 3333,
                 },
@@ -172,7 +171,7 @@ export class Backend {
                     hostname: "api.coingecko.com",
                     port: 443,
                     coin: "babycoin",
-                    endpoint: "/api/v3/coins/evox/tickers"
+                    endpoint: "/api/v3/coins/baby/tickers"
                 }
             },
 
@@ -320,7 +319,7 @@ export class Backend {
                   }
 
                   if (path) {
-                      const baseUrl = net_type === "testnet" ? "https://testnet.babycoin-network.org/" : "https://blockchain.babycoin.dev/"
+                      const baseUrl = net_type === "testnet" ? "https://blockchain.babycoin.dev" : "https://blockchain.babycoin.dev"
                       const url = `${baseUrl}/${path}/`
                       require("electron").shell.openExternal(url + params.id)
                   }
