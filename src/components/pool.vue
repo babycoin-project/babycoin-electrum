@@ -411,7 +411,7 @@
         </div>
         <div v-if="page=='stats'">
             <div class="q-layout-page">
-              <webview src="https://solo.evolutionproject.space/" autosize="on" ></webview>
+              <webview src="https://babycoin.multipool.net/" autosize="on" ></webview>
             </div>
         </div>
         <div v-if="page=='blocks'">

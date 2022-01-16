@@ -75,24 +75,12 @@ export default {
 
         isAddressValid(input) {
 
-            if(!(/^[0-9A-Za-z]+$/.test(input))) return false
-
-            switch (input.substring(0,4)) {
-                case "ev":
-                case "evo":
-                    return input.length === 97
-
-                case "evc":
-                    return input.length == 99
-
-                case "ev":
-                case "evo":
-                case "evc":
-                    return input.length === 109
-
-                default:
-                    return false
+            if (input.substring(0,4) == "baby" && input.length == 99) {
+              return true;
+            } else {
+              return false;
             }
+
         },
 
         seedrand(seed) {
