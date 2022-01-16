@@ -21,24 +21,9 @@ export const address = (input) => {
     return new Promise((resolve, reject) => {
         try {
             if (/^[0-9A-Za-z]+$/.test(input)) {
-                switch(input.substring(0,3)) {
-                    case "evo":
-                        resolve(input.length === 109)
-                        break
-              //      case "evz":
-              //          resolve(input.length === 97)
-              //          break
-              //      case "evz":
-                //        resolve(input.length === 97)
-              //          break
-              //      case "evz":
-              //          resolve(input.length === 97)
-            //            break
-                    case "evz":
-                        resolve(input.length === 98)
-                        break
-                    case "evc":
-                        resolve(input.length === 98)
+                switch(input.substring(0,4)) {
+                    case "baby":
+                        resolve(input.length === 99)
                         break
 
                     default:
