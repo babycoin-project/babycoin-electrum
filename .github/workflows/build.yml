@@ -3,7 +3,7 @@ name: Babycoin Electron Wallet Build and PUB
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
     build:
