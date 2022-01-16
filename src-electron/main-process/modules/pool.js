@@ -16,10 +16,10 @@ export class Pool {
     constructor(backend) {
         this.backend = backend
         this.daemon_type = backend.config_data.daemon.type
-        this.active = false
+        this.active = true
         this.config = null
         this.server = null
-        this.isPoolRunning = false
+        this.isPoolRunning = true
         this.id = 0
         this.agent = new http.Agent({keepAlive: true, maxSockets: 1})
         this.dealer = null
@@ -219,9 +219,9 @@ export class Pool {
     }
 
     checkHeight() {
-        let url = "https://explorer.babycoin-network.org/api/networkinfo"
+        let url = "http://51.79.65.90:51022/get_info"
         if(this.testnet) {
-            url = "https://explorer.evolutio-network.org/api/networkinfo"
+            url = "http://51.79.65.90:51022/get_info"
         }
         return request(url)
     }

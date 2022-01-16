@@ -51,9 +51,9 @@ export class Daemon {
     }
 
      checkRemoteHeight() {
-        let url = "https://explorer.babycoin-network.org/api/networkinfo"
+        let url = "https://blockchain.babycoin.dev/api/networkinfo"
         if(this.testnet) {
-            url = "https://testnet.babycoin-network.org/api/networkinfo"
+            url = "https://blockchain.babycoin.dev/api/networkinfo"
         }
         request(url).then(response => {
             try {
