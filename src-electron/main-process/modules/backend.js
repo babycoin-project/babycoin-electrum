@@ -139,7 +139,7 @@ export class Backend {
             pool: {
                 server: {
                     enabled: true,
-                    bindIP: "0.0.0.0",
+                    bindIP: "127.0.0.1",
                     bindPort: 3333,
                 },
                 mining: {

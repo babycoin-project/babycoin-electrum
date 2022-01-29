@@ -219,9 +219,9 @@ export class Pool {
     }
 
     checkHeight() {
-        let url = "http://51.79.65.90:51022/get_info"
+        let url = "https://blockchain.babycoin.dev/api/networkinfo"
         if(this.testnet) {
-            url = "http://51.79.65.90:51022/get_info"
+            url = "https://blockchain.babycoin.dev/api/networkinfo"
         }
         return request(url)
     }

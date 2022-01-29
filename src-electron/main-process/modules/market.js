@@ -20,7 +20,7 @@ export class Market {
         this.agent = new https.Agent({ keepAlive: true, maxSockets: 1 })
         this.queue = new queue(1, Infinity)
         this.options = null
-        this.endpoint = "/api/v1/get_markets_json.php?market=EVOX/BTC"
+        this.endpoint = "/api/v1/get_markets_json.php?market=BABY/BTC"
     }
 
     start (options) {

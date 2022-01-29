@@ -34,7 +34,7 @@
                         <div class="infoBox">
                             <div class="infoBoxContent">
                                 <div class="text"><span>Hashrate</span></div>
-                                <div class="value"><span>{{ pool.stats.h ? pool.stat.h.hashrate_5min : 0 | hashrate }}</span></div>
+                                <div class="value"><span>{{ pool.stats.h ? pool.stats.h.hashrate_1hr : 0 | hashrate }}</span></div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                         </q-field>
                     </div>
                     <div class="col-6">
-                    <!--    <q-field>
+                        <q-field>
                             <q-checkbox v-model="enableStats" label="Privately Share Hashrate" />
                             <q-btn
                                 @click="modals.stats = true"
@@ -151,7 +151,7 @@
                                 size="sm"
                                 dense round flat
                                 />
-                        </q-field>  -->
+                        </q-field>
                     </div>
                     <div class="col-3">
                         <span>Pool status:</span>
@@ -900,9 +900,9 @@ export default {
                 bindPort: { between: between(1024, 65535) },
             },
             varDiff: {
-                startDiff: { between: between(1000, 1000000) },
-                minDiff: { between: between(1000, 1000000) },
-                maxDiff: { between: between(1000, 1000000) },
+                startDiff: { between: between(10000, 1000000) },
+                minDiff: { between: between(10000, 1000000) },
+                maxDiff: { between: between(10000, 1000000) },
                 targetTime: { between: between(15, 600) },
                 retargetTime: { between: between(30, 1200) },
                 variancePercent: { between: between(20, 80) },
@@ -958,7 +958,7 @@ export default {
             varDiffDefaults: {
                 enabled: true,
                 startDiff: 5000,
-                minDiff: 1000,
+                minDiff: 50000,
                 maxDiff: 1000000,
                 targetTime: 45,
                 retargetTime: 60,
