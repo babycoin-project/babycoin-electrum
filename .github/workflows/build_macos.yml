@@ -23,6 +23,9 @@ jobs:
               with:
                 node-version: "11.9.0"
 
+            - name: Download BabyCoin binaries
+              run: node ./build/download-binaries.js
+
             - name: Install dependencies
               run: npm install -f
 
