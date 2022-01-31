@@ -26,16 +26,6 @@ jobs:
             - name: Install dependencies
               run: npm install -f
               
-            - name: Extract zip binaries
-              if: runner.os != 'Linux'
-              run: unzip latest.zip
-              shell: bash
-              working-directory: ./downloads
-
-            - name: Verify binaries
-              run: ls ./bin
-              shell: bash
-
             - name: Publish mac binaries
               if: runner.os == 'macOS'
               run: npm run build
