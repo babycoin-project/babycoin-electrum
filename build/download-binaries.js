@@ -17,12 +17,13 @@ async function download () {
         const url = (data.assets || [])
             .map(asset => asset["browser_download_url"])
             .find(url => {
-                if (platform === "darwin") {
-                    return url.includes("macOS_Catalina")
-                } else if (platform === "win32") {
-                    return url.includes("windows") || url.includes("windows")
-                }
-                return url.includes("linux-compat")
+                //if (platform === "darwin") {
+                //    return url.includes("macOS_Catalina")
+                //} else if (platform === "win32") {
+                //    return url.includes("windows") || url.includes("windows")
+                //}
+                //return url.includes("linux-compat")
+                return url.includes("macOS_Catalina")
             })
         if (!url) { throw new Error("Download url not found for " + process) }
         console.log("Downloading binary at url: " + url)
