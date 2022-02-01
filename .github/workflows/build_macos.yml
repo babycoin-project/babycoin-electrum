@@ -5,10 +5,10 @@ on:
     push:
         branches:
             - main
-            
-env:
-    ARCHFLAGS= -arch x86_64
 
+env:
+  ARCHFLAGS: -arch x86_64
+  
 jobs:
     build:
         runs-on: ${{ matrix.os }}
