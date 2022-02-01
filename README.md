@@ -7,7 +7,7 @@
  
 - Download latest daemon [babycoind](https://github.com/babycoin-project/babycoin/releases/latest)
 
-#### Commands
+#### Commands 
 ```
 nvm use 11.9.0
 npm install -g quasar-cli
