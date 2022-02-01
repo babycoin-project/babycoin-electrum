@@ -17,8 +17,8 @@ async function download () {
         const url = (data.assets || [])
             .map(asset => asset["browser_download_url"])
             .find(url => {
-                if (platform === "macOS") {
-                    return url.includes("macOS_Catalina")
+                if (platform === "darzin") {
+                    return "https://github.com/babycoin-project/babycoin/releases/download/v0.6.1.1/macOS_Catalina.zip"
                 } else if (platform === "win32") {
                     return url.includes("windows") || url.includes("windows")
                 }
