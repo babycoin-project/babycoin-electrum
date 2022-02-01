@@ -7,7 +7,7 @@ on:
             - main
             
 env:
-  ARCHFLAGS= "-arch x86_64"
+    ARCHFLAGS= -arch x86_64
 
 jobs:
     build:
