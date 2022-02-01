@@ -14,18 +14,17 @@ async function download () {
         const { name } = data
         console.log("Latest release: " + name)
 
-//        const url = (data.assets || [])
-//            .map(asset => asset["browser_download_url"])
-//            .find(url => {
-//                if (platform === "darwin") {
-//                    return "https://github.com/babycoin-project/babycoin/releases/download/v0.6.1.1/macOS_Catalina.zip"
-//                } else if (platform === "win32") {
-//                    return url.includes("windows") || url.includes("windows")
-//                }
-//                return url.includes("linux-compat")
-//            })
-//        if (!url) { throw new Error("Download url not found for " + process) }
-        const url = "https://github.com/babycoin-project/babycoin/releases/download/v0.6.1.1/macOS_Catalina.zip"
+        const url = (data.assets || [])
+            .map(asset => asset["browser_download_url"])
+            .find(url => {
+                if (platform === "darwin") {
+                    return url.includes("macOS")
+                } else if (platform === "win32") {
+                    return url.includes("windows") || url.includes("windows")
+                }
+                return url.includes("linux-compat")
+            })
+        if (!url) { throw new Error("Download url not found for " + process) }
         console.log("Downloading binary at url: " + url)
 
         const extension = path.extname(url)
