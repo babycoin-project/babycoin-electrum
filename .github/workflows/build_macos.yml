@@ -12,7 +12,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-              os: [macos-10]
+              os: [macos-10.15]
 
         steps:
             - name: Checkout git repo
