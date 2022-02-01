@@ -48,7 +48,7 @@ jobs:
   
             - name: Publish mac binaries
               if: runner.os == 'macOS'
-              run: npm run build --arch x64
+              run: npm run build --arch x64_86
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 CSC_LINK: ${{ secrets.MAC_CERTIFICATE }}
