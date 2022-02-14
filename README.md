@@ -3,10 +3,6 @@
 
   * Repo to latest version of babycoin-electrum, the BabyCoin electrom wallet.
 
-#### Alternatives
-
-While we recommend using babycoin-electrum cold wallet for safety reasons and network sustainability, we provide a web-based wallet at [wallet.babycoin.dev](https://wallet.babycoin.dev).
-
 #### Pre-requisites
  
 - Download latest daemon [babycoind](https://github.com/babycoin-project/babycoin/releases/latest)
@@ -33,6 +29,10 @@ For building:
 ```
 npm run build
 ```
+
+#### Alternatives
+
+While we recommend using babycoin-electrum cold wallet for safety reasons and network sustainability, we provide a web-based wallet at [wallet.babycoin.dev](https://wallet.babycoin.dev).
 
 ### Credits
 
